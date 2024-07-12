@@ -1,0 +1,557 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+#main {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+/* ---------------------------------- page 1 -------------------------------------- */
+
+#page1 {
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+}
+
+#page1 img {
+    width: 100%;
+    height: 100%;
+}
+
+#layer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(2, 15, 53, 0.384);
+}
+
+#nav {
+    z-index: 7;
+    width: 100%;
+    padding: 20px 0px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#nav a {
+    font-size: 14px;
+    font-weight: 900;
+    color: rgba(255, 255, 255, 0.679);
+    text-decoration: none;
+
+}
+#nav a:hover{
+    color: white;
+    text-decoration: underline;
+}
+
+#nav #search i {
+    margin-right: 10px;
+    color: aliceblue;
+    font-size: small;
+}
+
+#nav i {
+
+    color: aliceblue;
+    font-size: 0px;
+    font-weight: 100;
+}
+
+
+
+
+#content {
+    width: 100%;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    font-family: "gilroy";
+    color: aliceblue;
+    z-index: 4;
+
+}
+
+#content h1 {
+    font-weight: 500;
+    font-size: 0vw;
+    animation-name: anime;
+    animation-duration: 0.5s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+}
+@keyframes anime {
+    0% {
+        font-size: 0;
+        bottom: -100;
+    }
+
+    100% {
+        top: 55%;
+        left: 50%;
+        font-size: 5vw;
+    }
+
+}
+
+#content p {
+    margin-top: 15px;
+    margin-bottom: 150px;
+    font-size: 0vw;
+    font-weight: 400;
+    animation-name: anime1;
+    animation-duration: 0.5s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+}
+@keyframes anime1 {
+    0% {
+        font-size: 0;
+        top: -100;
+        
+    }
+
+    100% {
+        top: 60%;
+        left: 50%;
+        font-size: 1vw;
+    }
+
+}
+
+
+#content #icon i {
+    position: absolute;
+    font-size: 0px;
+    animation-name: anime3;
+    animation-duration: 0.5s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+    
+    animation-timing-function: linear;
+
+}
+@keyframes anime3 {
+    0%{
+        font-size: 0;
+        bottom: -100;
+        left: -100%;
+    }
+    100%{
+        font-size: 70px;
+        top: 70%;
+        left: 48%;
+    }
+}
+#icon {
+    width: 100%;
+}
+
+/* ======================= animation layer =========================== */
+
+#animate_layer{
+    position: absolute;
+    top: -100;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    z-index: 5;
+    
+}
+@keyframes layer {
+    0%{
+        z-index: 5;
+    }
+    100%{
+        z-index: -1;
+    }
+    
+}
+
+#animate_layer i{
+    position: absolute;
+    transform: rotateY(0deg);
+    color: white;
+    font-size: 10vw;
+    top: -100%;
+    left: 48%;
+    transform: translate(-50%,-50%);
+    animation-name: icon;
+    animation-duration: 2s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear; 
+}
+@keyframes icon {
+    0%{
+        top: -100;
+    }
+    50%{
+        top: 50%;
+        left: 48%;
+    }
+    
+    80%{
+        top: 50%;
+        left: 48%;
+        transform: rotateY(180deg);
+    }
+    100%{
+        top: 4.2%;
+        left: 48.85%;
+        font-size: 25px;
+    }
+    
+}
+
+
+#lingrad_layer {
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    bottom: 0;
+    background: linear-gradient(to bottom, transparent, black);
+}
+
+/* ------------------------------------------------- page2------------------------------------- */
+
+#page2 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+
+}
+
+#content_page2 {
+    position: absolute;
+    left: 32%;
+    width: 550px;
+    height: 150px;
+    font-family: "gilroy";
+
+}
+
+#content_page2 h2 {
+
+    color: aliceblue;
+    text-align: center;
+    font-size: 30px;
+    font-family: "gilroy";
+    font-weight: 400;
+    letter-spacing: 2px;
+    margin-bottom: 50px;
+}
+
+#content_page2 p {
+    color: rgba(240, 248, 255, 0.695);
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    line-height: 1.5;
+}
+
+/* ----------------------------- cards --------------------------------------- */
+
+#card {
+    width: 100%;
+    height: 70%;
+    position: absolute;
+    top: 22%;
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+    gap: 40px;
+    padding: 0px 200px;
+}
+
+/* ============================== card1  ================================ */
+#card #card1 {
+    position: relative;
+    width: 350px;
+    height: 480px;
+    border: 3px solid white;
+}
+
+#card #card1:hover{
+    width: 370px;
+    height: 510px;
+}
+
+/* ============================== card2  ================================ */
+
+#card #card2 {
+    position: relative;
+    width: 350px;
+    height: 480px;
+    border: 3px solid white;
+}
+#card #card2:hover{
+    width: 370px;
+    height: 510px;
+}
+
+/* ============================== card3  ================================ */
+
+#card #card3 {
+    position: relative;
+    width: 350px;
+    height: 480px;
+    border: 3px solid white;
+}
+#card #card3:hover{
+    width: 370px;
+    height: 510px;
+}
+
+/* =============================== card content ========================== */
+
+#card_img img {
+    height: 100%;
+    width: 100%;
+    filter: brightness(1.3);
+}
+
+#card_img {
+    /* // div h yeh */
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+}
+
+#cards_content {
+    position: absolute;
+    margin: 0 10px;
+    top: 80%;
+    width: 100%;
+    height: 100px;
+    z-index: 2;
+    text-align: center;
+
+}
+
+#cards_content h2 {
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 200;
+}
+
+#cards_content p {
+    margin-top: 10px;
+    color: white;
+    font-weight: 400;
+}
+
+/* ---------------------------------- page 3------------------------------------ */
+#page3 {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    font-family: "gilroy";
+    overflow: hidden;
+}
+
+#page3_content {
+    width: 100%;
+    padding-top: 75px;
+}
+
+#page3_content h2 {
+    text-align: center;
+    letter-spacing: 3px;
+    color: aliceblue;
+    font-weight: 600;
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+#page3_content p {
+    text-align: center;
+    color: rgba(240, 248, 255, 0.562);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+#page3 #cards {
+    display: flex;
+    padding: 80px 200px 0px 200px;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+#cards #card1 {
+    height: 300px;
+    width: 500px;
+    background-color: red;
+}
+#card1 img {
+    height: 100%;
+    width: 100%;
+}
+
+#cards #card2 {
+    height: 300px;
+    width: 500px;
+    background-color: red;
+}
+
+#card2 img {
+    height: 100%;
+    width: 100%;
+}
+#cards #card3 {
+    height: 300px;
+    width: 500px;
+    background-color: red;
+}
+
+#card3 img {
+    height: 100%;
+    width: 100%;
+}
+
+#bottom_one {
+    position: absolute;
+    margin-left: 200px;
+    margin-top: 20px;
+    height: 150px;
+    width: 500px;
+    text-align: center;
+}
+
+#bottom_one h2 {
+    color: rgba(240, 248, 255, 0.906);
+    font-weight: 600;
+    margin-bottom: 30px;
+    font-size: 27px;
+
+}
+
+#bottom_one h4 {
+    color: rgba(240, 248, 255, 0.696);
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+
+#bottom_one p {
+    color: rgba(240, 248, 255, 0.652);
+    font-size: 16px;
+    line-height: 1.3;
+    font-weight: 400;
+}
+
+/* -------------- two------------------- */
+
+#bottom_two {
+    right: 0;
+    position: absolute;
+    margin-right: 200px;
+    margin-top: 20px;
+    height: 150px;
+    width: 500px;
+    text-align: center;
+}
+
+#bottom_two h2 {
+    color: rgba(240, 248, 255, 0.908);
+    font-weight: 600;
+    margin-bottom: 30px;
+    font-size: 27px;
+
+}
+
+#bottom_two h4 {
+    color: rgba(240, 248, 255, 0.785);
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+
+#bottom_two p {
+    color: rgba(240, 248, 255, 0.652);
+    font-size: 16px;
+    line-height: 1.3;
+    font-weight: 400;
+}
+
+
+
+/* ---------------------------------- page 4 --------------------------------- */
+#page4 {
+    width: 100%;
+    height: 100%;
+    font-family: "gilroy";
+}
+
+#image {
+    width: 100%;
+    height: 100%;
+}
+
+#image img {
+    width: 100%;
+    height: 100%;
+}
+
+#last {
+    width: 100%;
+    height: 100px;
+    background-color: black;
+}
+
+#bot {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+}
+
+#bot hr {
+    /* rotate: 90deg; */
+    height: 30px;
+
+    font-weight: bolder;
+}
+
+#bot p {
+    color: aliceblue;
+    font-weight: 500;
+}
+
+#bot a {
+    color: rgba(240, 248, 255, 0.741);
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 14px;
+}
+
+#last h1 {
+    color: aliceblue;
+    text-align: center;
+}
